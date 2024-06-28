@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./src/assets/index.css">
     <link rel="shortcut icon" href="./public/favicon.svg" type="image/x-icon">
     <title>Events - Cadastro do Evento</title>
@@ -26,7 +38,7 @@
                     Informações do Evento
                 </legend>
 
-                <form action="/">
+                <form action="/" id="form" name="form">
 
                 
                     
@@ -70,36 +82,35 @@
                             </h2>
                             
                             <label for="private_email">E-mail do administrador <span class="color">(digite um email válido)</span></label>
-                            <input type="email" placeholder="selecione o email" name="private_email" id="private_email">
+                            <input required  type="email" placeholder="selecione o email" name="private_email" id="private_email">
                             
                             <label for="private_password">Senha do administrador <span class="color">(mínimo 8 caractéres)</span></label>
-                            <input type="password" placeholder="digite uma senha" minlength="8">
+                            <input required  type="password" placeholder="digite uma senha" minlength="8">
                             
                             <div id="private_checkbox_div">
-                                <input type="checkbox" name="private_event" id="private_event">
+                                <input required  type="checkbox" name="private_event" id="private_event">
                                 <label for="private_event">Evento Privado</label>
                             </div>
                         </div>
 
                         <div id="data_section">
                             <h2>Dia e hora</h2>
-                            <div>
-                                <label for="date">Data</label>
-                                <input type="date" name="date" id="">
                                 <div>
+                                    <label for="date">Data</label>
+                                    <input required  type="date" name="date" id="">
+                                
                                     <label for="time_start">das</label>
-                                    <input type="time" name="time_start" id="time_start">
+                                    <input required  type="time" name="time_start" id="time_start">
 
                                     <label for="time_end">até</label>
-                                    <input type="time" name="time_end" id="time_end">
+                                    <input required  type="time" name="time_end" id="time_end">
                                 </div>
-                            </div>
                         </div>
-                    </div>
+                </div>
 
                     <div id="show_img">
                         <img src="public/img/Rectangle 3show.svg" alt="event_image"/>
-                        <h2 id="text">Your event <br> almost here !</h2>
+                        <h2 id="text">Your event <br> almost done !</h2>
                     </div>
                 
                 </fieldset>
@@ -114,7 +125,7 @@
             
         
 
-                <button id="button_submit" type="submit" >
+                <button id="button_submit" type="submit" form="form">
                     salvar evento
                 </button>
 
